@@ -1,0 +1,28 @@
+{
+  "name": "docker-cicd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node app.js",
+    "start": "NODE_ENV=development node app.js",
+    "test": "npx jest --detectOpenHandles  --runInBand --forceExit --coverage --verbose --watchAll",
+    "seed": "node prisma/seed.js"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express-async-errors": "^3.1.1",
+    "pg": "^8.11.3",
+    "prisma": "^5.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  }
+}

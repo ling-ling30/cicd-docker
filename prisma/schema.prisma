@@ -1,0 +1,31 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+  binaryTargets   = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  schemas  = ["development", "testing"]
+}
+
+model task {
+  id        Int      @id @default(autoincrement())
+  task      String   @db.VarChar(255)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  complete  Boolean  @default(false)
+
+  @@schema("development")
+}
+
+model testing {
+  id        Int      @id @default(autoincrement())
+  task      String   @db.VarChar(255)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  complete  Boolean  @default(false)
+
+  @@schema("testing")
+}

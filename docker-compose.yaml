@@ -1,0 +1,35 @@
+version: '3'
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  todoapidocker-homework:
+    build: .
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:postgres@0.0.0.0:5439/todo-db-docker
+      - PORT=8080
+    networks:
+      - app-tier
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    # volumes:
+    #   -"./:/Docker-lessons/scr/app"
+
+
+  postgres:
+    image: postgres:14.9-alpine3.18
+    restart: always
+    networks:
+      - app-tier
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=todo-db-docker
+      - POSTGRES_PASSWORD=postgres
+      - PG_PORT=5439
+    ports:
+      - "5439:5439"
