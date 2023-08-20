@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "node app.js",
-    "start": "NODE_ENV=development node app.js",
-    "test": "npx jest --detectOpenHandles  --runInBand --forceExit --coverage --verbose --watchAll",
-    "seed": "node prisma/seed.js"
+    "migrate": "npx prisma migrate dev",
+    "migrate:test": "dotenv -e .env.testing -- prisma migrate dev",
+    "test": "dotenv -e .env.testing -- npx jest --detectOpenHandles  --runInBand --forceExit --coverage --verbose --watchAll",
+    "seed": "node prisma/seed.js",
+    "seed:test": "dotenv -e .env.testing -- node prisma/seed.js"
   },
   "prisma": {
     "seed": "node prisma/seed.js"
@@ -17,6 +19,7 @@
   "dependencies": {
     "@prisma/client": "^5.1.1",
     "dotenv": "^16.3.1",
+    "dotenv-cli": "^7.3.0",
     "express-async-errors": "^3.1.1",
     "pg": "^8.11.3",
     "prisma": "^5.1.1"

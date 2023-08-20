@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1692509385652" clover="3.2.0">
-  <project timestamp="1692509385653" name="All files">
-    <metrics statements="78" coveredstatements="71" conditionals="22" coveredconditionals="14" methods="7" coveredmethods="7" elements="107" coveredelements="92" complexity="0" loc="78" ncloc="78" packages="5" files="6" classes="6"/>
+<coverage generated="1692529882063" clover="3.2.0">
+  <project timestamp="1692529882063" name="All files">
+    <metrics statements="79" coveredstatements="71" conditionals="22" coveredconditionals="14" methods="7" coveredmethods="7" elements="108" coveredelements="92" complexity="0" loc="79" ncloc="79" packages="5" files="6" classes="6"/>
     <package name="Docker-CICD">
-      <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="app.js" path="C:\Users\ricky_g15pxmk\Documents\Coding\HOMEWORK\Docker-CICD\app.js">
-        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -15,16 +15,16 @@
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Docker-CICD.controllers">
-      <metrics statements="45" coveredstatements="38" conditionals="18" coveredconditionals="11" methods="4" coveredmethods="4"/>
+      <metrics statements="45" coveredstatements="39" conditionals="18" coveredconditionals="11" methods="4" coveredmethods="4"/>
       <file name="task.js" path="C:\Users\ricky_g15pxmk\Documents\Coding\HOMEWORK\Docker-CICD\controllers\task.js">
-        <metrics statements="45" coveredstatements="38" conditionals="18" coveredconditionals="11" methods="4" coveredmethods="4"/>
+        <metrics statements="45" coveredstatements="39" conditionals="18" coveredconditionals="11" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -68,7 +68,7 @@
         <line num="61" count="1" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
         <line num="65" count="1" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
         <line num="70" count="1" type="stmt"/>
       </file>
     </package>
@@ -82,16 +82,17 @@
       </file>
     </package>
     <package name="Docker-CICD.middleware">
-      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="error-handler.js" path="C:\Users\ricky_g15pxmk\Documents\Coding\HOMEWORK\Docker-CICD\middleware\error-handler.js">
-        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Docker-CICD.routes">

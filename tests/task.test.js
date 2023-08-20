@@ -1,5 +1,3 @@
-require("dotenv").config(); // Load testing environment variables
-
 const app = require("../app.js");
 const request = require("supertest");
 const { PrismaClient } = require("@prisma/client");
@@ -10,35 +8,40 @@ const prisma = new PrismaClient();
 
 beforeAll((done) => {
   async function main() {
-    const task1 = await prisma.testing.upsert({
+    const deleteAll = await prisma.task.deleteMany({});
+    const task1 = await prisma.task.upsert({
       where: { id: 1 },
       update: {},
       create: {
+        id: 1,
         task: "Morning run",
       },
     });
-    const task2 = await prisma.testing.upsert({
+    const task2 = await prisma.task.upsert({
       where: { id: 2 },
       update: {},
       create: {
+        id: 2,
         task: "Eat a healthy breakfast",
       },
     });
-    const task3 = await prisma.testing.upsert({
+    const task3 = await prisma.task.upsert({
       where: { id: 3 },
       update: {},
       create: {
+        id: 3,
         task: "Do Homework",
       },
     });
-    const task4 = await prisma.testing.upsert({
+    const task4 = await prisma.task.upsert({
       where: { id: 4 },
       update: {},
       create: {
+        id: 4,
         task: "Take out the trash",
       },
     });
-    console.log(task1, task2, task3, task4);
+    // console.log(task1, task2, task3, task4);
   }
   main()
     .then(async () => {
@@ -54,10 +57,10 @@ beforeAll((done) => {
 });
 
 afterAll((done) => {
-  async function main() {
-    await prisma.testing.deleteMany();
+  async function deleteAllRecords() {
+    await prisma.task.deleteMany({});
   }
-  main()
+  deleteAllRecords()
     .then(async () => {
       await prisma.$disconnect();
       done();

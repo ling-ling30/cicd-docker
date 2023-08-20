@@ -4,21 +4,17 @@ const prisma = new PrismaClient();
 
 class Task {
   static allTasks = async (req, res) => {
-    try {
-      let { id } = req.query;
-      const queryObject = {};
-      if (id) {
-        queryObject.id = Number(id);
-      }
-      const data = await prisma.task.findMany({ where: queryObject });
-      // console.log(data.length);
-      if (data.length === 0) {
-        throw new CustomErrorHandler("data not found", 400);
-      }
-      res.json({ status: "success", data });
-    } catch (error) {
-      console.log(error);
+    let { id } = req.query;
+    const queryObject = {};
+    if (id) {
+      queryObject.id = Number(id);
     }
+    const data = await prisma.task.findMany({ where: queryObject });
+    // console.log(data.length);
+    if (data.length === 0) {
+      throw new CustomErrorHandler("data not found", 400);
+    }
+    res.json({ status: "success", data });
   };
 
   static createTask = async (req, res) => {

@@ -1,7 +1,7 @@
 const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
-
+console.log(process.env.NODE_ENV);
 async function main() {
   const task1 = await prisma.task.upsert({
     where: { id: 1 },
@@ -10,6 +10,7 @@ async function main() {
       task: "Morning run",
     },
   });
+
   const task2 = await prisma.task.upsert({
     where: { id: 2 },
     update: {},

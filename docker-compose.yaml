@@ -30,6 +30,6 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_DB=todo-db-docker
       - POSTGRES_PASSWORD=postgres
-      - PG_PORT=5439
+      - PGPORT=5439
     ports:
       - "5439:5439"
