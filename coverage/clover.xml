@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1692529882063" clover="3.2.0">
-  <project timestamp="1692529882063" name="All files">
-    <metrics statements="79" coveredstatements="71" conditionals="22" coveredconditionals="14" methods="7" coveredmethods="7" elements="108" coveredelements="92" complexity="0" loc="79" ncloc="79" packages="5" files="6" classes="6"/>
+<coverage generated="1692605812636" clover="3.2.0">
+  <project timestamp="1692605812636" name="All files">
+    <metrics statements="76" coveredstatements="68" conditionals="20" coveredconditionals="12" methods="6" coveredmethods="6" elements="102" coveredelements="86" complexity="0" loc="76" ncloc="76" packages="5" files="6" classes="6"/>
     <package name="Docker-CICD">
-      <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="C:\Users\ricky_g15pxmk\Documents\Coding\HOMEWORK\Docker-CICD\app.js">
-        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -15,10 +15,7 @@
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Docker-CICD.controllers">

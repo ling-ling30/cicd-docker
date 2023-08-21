@@ -1,1 +1,6 @@
+# development environment
 DATABASE_URL="postgresql://postgres:postgres@localhost:5432/todo-db"
+
+# testing environment-docker
+# DATABASE_URL="postgresql://postgres:postgres@postgres:5439/todo-db"
+

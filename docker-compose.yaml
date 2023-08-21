@@ -8,8 +8,6 @@ services:
   todoapidocker-homework:
     build: .
     environment:
-      - NODE_ENV=development
-      - DATABASE_URL=postgresql://postgres:postgres@0.0.0.0:5439/todo-db-docker
       - PORT=8080
     networks:
       - app-tier
